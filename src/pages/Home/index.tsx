@@ -4,9 +4,15 @@ import {
   FormContainer,
   HomeContainer,
   Separator,
+  StartCountdownButton,
 } from "./styles";
 
 export function Home() {
+  function handleSubmit(event: any) {
+    event.preventDefault();
+    alert("I Love You!♥♥ ");
+    alert("You belong with me!♥♥ ");
+  }
   return (
     <HomeContainer>
       <form action="">
@@ -28,10 +34,10 @@ export function Home() {
           <span>0</span>
         </CountdownContainer>
 
-        <button type="submit">
+        <StartCountdownButton type="submit" onClick={handleSubmit}>
           <Play size={24} />
           Start
-        </button>
+        </StartCountdownButton>
       </form>
     </HomeContainer>
   );
